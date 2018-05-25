@@ -1,0 +1,9 @@
+Apa itu vue js?
+
+vue js = javaScript Library untuk lebih interaksi
+vue js reactive, data binding, composer dan view component
+
+
+
+
+Data Binding?

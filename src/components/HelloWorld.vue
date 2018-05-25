@@ -1,25 +1,26 @@
 <template>
+
   <div class="hello">
     <!-- khusus v-on bisa diganti dengan @ ,
-     referensinya cari di shorthand nya-->    
+     referensinya cari di shorthand nya-->
 
-    <input 
-      type="text" 
+    <input
+      type="text"
       placeholder="nama depan"
-      v-model="firstname">
-    <input 
-      type="text" 
+      v-model.trim="firstname">
+    <input
+      type="text"
       placeholder="nama belakang"
       v-model="lastname">
     <br>
-    <button @click="showName()">Tampilkan data diri</button>  
+    <button @click="showName()">Tampilkan data diri</button>
 
     <div v-if="isNameShown">
-      <h1>Halo nama saya {{ firstname }} {{lastname}}</h1>
+      <h1>Halo my name {{ firstname }} {{lastname}}</h1>
       <p>
         Saya tingal di {{address.city}}, {{address.province}}
         umur {{ getMyAge }}
-      
+
       </p>
       <p v-if="age >0 && age <10">saya masih kecil</p>
       <p v-else-if="age >10 && age <=20">saya masih remaja</p>
@@ -30,7 +31,7 @@
         <li>
         <!-- khusus untuk binding data v-bind bisa diganti dengan :-->
           <a
-            v-bind:href="facebookUrl" 
+            v-bind:href="facebookUrl"
             target="_blank"
             :title ="work ? 'Bekerja' : 'Tidak Bekerja'"
           >
